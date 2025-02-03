@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="XAF_CRMTEST">
+  <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
+  </BOModel>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="24.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="24.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="24.2.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <DetailView Id="Books_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Books" RelativeSize="24.914675767918087">
+              <LayoutItem Id="BookTitle" RelativeSize="21.91780821917808" />
+              <LayoutItem Id="Author" RelativeSize="16.438356164383563" />
+              <LayoutItem Id="Publisher" RelativeSize="18.493150684931507" />
+              <LayoutItem Id="Sinopsys" ViewItem="Sinopsys" Index="3" RelativeSize="43.15068493150685" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Autof3e2375c-c8a0-4770-8c96-3850f09b30c1" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="13.822525597269625" IsNewNode="True">
+              <LayoutGroup Id="Article_col1" ShowCaption="False" Index="0" RelativeSize="49.930651872399444" IsNewNode="True">
+                <LayoutItem Id="Price" ViewItem="Price" Index="0" RelativeSize="33.333333333333336" IsNewNode="True" />
+                <LayoutItem Id="Cost" ViewItem="Cost" Index="1" RelativeSize="29.62962962962963" IsNewNode="True" />
+                <LayoutItem Id="Stock" ViewItem="Stock" Index="2" RelativeSize="37.03703703703704" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Article_col2" ShowCaption="False" Index="1" RelativeSize="50.069348127600556" IsNewNode="True">
+                <LayoutItem Id="ProductCod" ViewItem="ProductCod" Index="0" RelativeSize="37.03703703703704" IsNewNode="True" />
+                <LayoutItem Id="Visible" ViewItem="Visible" Index="1" RelativeSize="62.96296296296296" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Caption="Oid" RelativeSize="61.262798634812285">
+              <LayoutItem Id="Oid" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Article" RelativeSize="56.5" Removed="True">
+              <LayoutGroup Id="Article_col1" RelativeSize="49.92846924177396">
+                <LayoutItem Id="Cost" RelativeSize="27.272727272727273" />
+                <LayoutItem Id="Price" RelativeSize="36.36363636363637" />
+                <LayoutItem Id="Stock" RelativeSize="36.36363636363637" />
+              </LayoutGroup>
+              <LayoutGroup Id="Article_col2" RelativeSize="50.07153075822604">
+                <LayoutItem Id="ProductCod" RelativeSize="63.63636363636363" />
+                <LayoutItem Id="Visible" RelativeSize="36.36363636363637" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="OrderDetails_Group" Direction="Vertical" RelativeSize="32.93515358361775" Removed="True">
+            <LayoutItem Id="OrderDetails" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="61.092150170648466" Caption="Sinopsis" Removed="True">
+            <LayoutItem Id="Sinopsys" ViewItem="Sinopsys" Index="0" RelativeSize="100" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Books_OrderDetails_ListView" AllowLink="False" AllowUnlink="False" />
+    <DetailView Id="Order_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Order" RelativeSize="10.231023102310232">
+              <LayoutItem Id="User" RelativeSize="51.61290322580645" />
+              <LayoutItem Id="OrderDate" RelativeSize="48.38709677419355" />
+            </LayoutGroup>
+            <LayoutItem Id="OrderDetails" ViewItem="OrderDetails" Index="1" RelativeSize="23.762376237623762" IsNewNode="True" />
+            <LayoutGroup Id="XPObject" Caption="Oid" RelativeSize="66.00660066006601" Index="2">
+              <LayoutItem Id="Oid" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="OrderDetails_Group" Direction="Vertical" RelativeSize="50" Removed="True">
+            <LayoutItem Id="OrderDetails" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Order_ListView" AllowUnlink="False" AllowLink="False" />
+    <ListView Id="Order_OrderDetails_ListView" AllowLink="False" AllowUnlink="False" />
+    <DetailView Id="OrderDetail_DetailView" ImageName="BO_Order_Item" DefaultFocusedItem="">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="OrderDetail" RelativeSize="14.191419141914192">
+              <LayoutItem Id="Order" RelativeSize="37.2093023255814" />
+              <LayoutItem Id="Book" RelativeSize="27.906976744186046" />
+              <LayoutItem Id="Quantity" RelativeSize="34.883720930232556" />
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Caption="Oid" RelativeSize="85.8085808580858">
+              <LayoutItem Id="Oid" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="OrderDetail_ListView" AllowLink="False" AllowUnlink="False" ImageName="BO_Order_Item" />
+    <ListView Id="OrderDetail_LookupListView" AllowLink="False" AllowUnlink="False" />
+  </Views>
+</Application>
